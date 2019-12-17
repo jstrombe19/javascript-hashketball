@@ -133,6 +133,10 @@ console.log('getAllPlayers', getAllPlayers());
 
 function numPointsScored(playerName) {
   // return getAllPlayers()[playerName]['points'];
+
+  // The following are solutions to building out a new object with the key of a player's name
+  // and the value of the player's points scored.
+
   const playerPoints = {};
   const allPlayersEntries = Object.entries(getAllPlayers());
   console.log('Entries of All Players Function', allPlayersEntries);
