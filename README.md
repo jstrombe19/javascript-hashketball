@@ -1,10 +1,12 @@
 # JavaScript Objectball
 
 ## Objectives
+
 1. Practice building nested objects.
 2. Practice iterating over nested objects.
 
 ## Instructions
+
 Great news! You're going to an NBA game. The only catch is that you've been
 volunteered to keep stats at the game.
 
@@ -12,70 +14,72 @@ Fork and clone this lab and run the test suite to get started. You'll be
 coding your solution in `objectball.js`.
 
 ### Part 1: Building the Object
+
 The first function you will define is called `gameObject`. This function contains
 and returns a object nested in the following manner:
 
-* The top level of the object has two keys: `"home"`, for the home team, and `"away"`, for the away team.
-* The values of the `"home"` and `"away"` keys are objects too. These objects have the following keys:
-  * `"teamName"`
-  * `"colors"`
-  * `"players"`
-* The `teamName` key points to a string of the team name.
-* The `colors` key points to an array of strings that are that team's colors.
-* The `players` key points to an object of players whose names (as strings) are
+- The top level of the object has two keys: `"home"`, for the home team, and `"away"`, for the away team.
+- The values of the `"home"` and `"away"` keys are objects too. These objects have the following keys:
+  - `"teamName"`
+  - `"colors"`
+  - `"players"`
+- The `teamName` key points to a string of the team name.
+- The `colors` key points to an array of strings that are that team's colors.
+- The `players` key points to an object of players whose names (as strings) are
   the keys to a object containing their stats. The values for each player's
   names and their stats can be found in the table below. The stats keys should
   be formatted like this:
-  * `"number"`
-  * `"shoe"`
-  * `"points"`
-  * `"rebounds"`
-  * `"assists"`
-  * `"steals"`
-  * `"blocks"`
-  * `"slamDunks"`
+  - `"number"`
+  - `"shoe"`
+  - `"points"`
+  - `"rebounds"`
+  - `"assists"`
+  - `"steals"`
+  - `"blocks"`
+  - `"slamDunks"`
 
 Use the following data to populate your `gameObject` as outlined above.
 
 Home Team:
-* Team name: Brooklyn Nets
-* Colors: Black, White
-* Players:
 
-|          Stat          | Info | Info |  Info | Info | Info   |
-|:------------------:|:-------------:|:------------:|:------------:|:-------------:|:-------------:|
-| **Player Name**    |  Alan Anderson| Reggie Evans | Brook Lopez  | Mason Plumlee | Jason Terry   |
-| **Number**         | 0             | 30           | 11           | 1             | 31            |
-| **Shoe**           | 16            | 14           | 17           | 19            | 15            |
-| **Points**         | 22            | 12           | 17           | 26            | 19            |
-| **Rebounds**       | 12            | 12           | 19           | 12            | 2             |
-| **Assists**        | 12            | 12           | 10           | 6             | 2             |
-| **Steals**         | 3             | 12           | 3            | 3             | 4             |
-| **Blocks**         | 1             | 12           | 1            | 8             | 11            |
-| **Slam Dunks**     | 1             | 7            | 15           | 5             | 1             |
+- Team name: Brooklyn Nets
+- Colors: Black, White
+- Players:
+
+|      Stat       |     Info      |     Info     |    Info     |     Info      |    Info     |
+| :-------------: | :-----------: | :----------: | :---------: | :-----------: | :---------: |
+| **Player Name** | Alan Anderson | Reggie Evans | Brook Lopez | Mason Plumlee | Jason Terry |
+|   **Number**    |       0       |      30      |     11      |       1       |     31      |
+|    **Shoe**     |      16       |      14      |     17      |      19       |     15      |
+|   **Points**    |      22       |      12      |     17      |      26       |     19      |
+|  **Rebounds**   |      12       |      12      |     19      |      12       |      2      |
+|   **Assists**   |      12       |      12      |     10      |       6       |      2      |
+|   **Steals**    |       3       |      12      |      3      |       3       |      4      |
+|   **Blocks**    |       1       |      12      |      1      |       8       |     11      |
+| **Slam Dunks**  |       1       |      7       |     15      |       5       |      1      |
 
 Away Team:
 
-* Team name: Charlotte Hornets
-* Colors: Turquoise, Purple
-* Players:
+- Team name: Charlotte Hornets
+- Colors: Turquoise, Purple
+- Players:
 
-|        Stat       |     Info          |         Info     |              Info |         Info     |         Info      |               
-|:------------------:|:-----------------:|:-----------------:|:-----------------:|:---------------:|:-----------------:|
-| **Player Name**  | Jeff Adrien     | Bismak Biyombo    | DeSagna Diop      | Ben Gordon      | Brendan Haywood   |
-| **Number**         | 4                 | 0                 | 2                 | 8               | 33                |
-| **Shoe**           | 18                | 16                | 14                | 15              | 15                |
-| **Points**         | 10                | 12                | 24                | 33              | 6                 |
-| **Rebounds**       | 1                 | 4                 | 12                | 3               | 12                |
-| **Assists**        | 1                 | 7                 | 12                | 2               | 12                |
-| **Steals**         | 2                 | 7                 | 4                 | 1               | 22                |
-| **Blocks**         | 7                 | 15                | 5                 | 1               | 5                 |
-| **Slam Dunks**     | 2                 | 10                | 5                 | 0               | 12                |
-
+|      Stat       |    Info     |      Info      |     Info     |    Info    |      Info       |
+| :-------------: | :---------: | :------------: | :----------: | :--------: | :-------------: |
+| **Player Name** | Jeff Adrien | Bismak Biyombo | DeSagna Diop | Ben Gordon | Brendan Haywood |
+|   **Number**    |      4      |       0        |      2       |     8      |       33        |
+|    **Shoe**     |     18      |       16       |      14      |     15     |       15        |
+|   **Points**    |     10      |       12       |      24      |     33     |        6        |
+|  **Rebounds**   |      1      |       4        |      12      |     3      |       12        |
+|   **Assists**   |      1      |       7        |      12      |     2      |       12        |
+|   **Steals**    |      2      |       7        |      4       |     1      |       22        |
+|   **Blocks**    |      7      |       15       |      5       |     1      |        5        |
+| **Slam Dunks**  |      2      |       10       |      5       |     0      |       12        |
 
 ### Step 2: Building Functions
 
 ### Calling Functions Within Functions
+
 You'll be building a series of functions that operate on the object returned
 from the `gameObject` function. Each function will call the `gameObject`
 function and then return properties accessed off it.
@@ -115,6 +119,7 @@ returned from `gameObject` inside of other functions we're building, let's
 make sure we know how to debug our programs, then build those functions.
 
 # Debugging JavaScript
+
 We have two options to debug our JavaScript programs:
 
 1. Use `console.log()` to print out parts of our program.
@@ -137,13 +142,12 @@ program.
 There are two debug tools. One is built into `node` and it's simple. The other
 is built into Chrome and it's fantastically interactive.
 
-
 When we run our programs in the command line using `node` we won't have
 access to a fancy debugger. Node does have it's own built-in debugger, but
 it's just not the best thing in the world. It's not intuitive. It's a bit
 hard to use. Check out the docs and see if you like it!
 
-* [Node's debugger documentation](https://nodejs.org/api/debugger.html)
+- [Node's debugger documentation](https://nodejs.org/api/debugger.html)
 
 When we're running command line applications in our terminal it would be
 natural to run our code with `node`. This means we won't have access to
@@ -159,7 +163,10 @@ open Chrome's dev tools to debug our program.
 
 ```html
 <h1>JavaScript Objectball</h1>
-<p>Open your Chrome dev tools to see console output and trigger the debugger to catch.</p>
+<p>
+  Open your Chrome dev tools to see console output and trigger the debugger to
+  catch.
+</p>
 
 <script src="./objectball.js"></script>
 <script src="./debug.js"></script>
@@ -177,28 +184,29 @@ debugger
 console.log('x:', x)
 ```
 
-* Look at the Sources pane to see your source code and see where the debugger
+- Look at the Sources pane to see your source code and see where the debugger
   has paused your program.
-* Observe the Scope section to the right of your source code to see the current
+- Observe the Scope section to the right of your source code to see the current
   value of different variables in your program.
-* Use your mouse to hover over variables in your source code to see their current value.
-* Press ESC to toggle having the console appear at the bottom of your sources
+- Use your mouse to hover over variables in your source code to see their current value.
+- Press ESC to toggle having the console appear at the bottom of your sources
   tab.
-* Use the console to type in variable names and see their values.
+- Use the console to type in variable names and see their values.
 
 ![Chrome Dev Tools](./chrome-dev-tools.png)
 
 ### Accessing Key Values and Iterating Through Objects
+
 There are three ways to iterate through objects in JavaScript:
 
-* Use a key you know and type the key as a string manually `oo['some_key']`
-* Use a key you know and type it after a dot manually `oo.some_key`
-* Notice that you can only access keys via the `.` if they have a name like a
+- Use a key you know and type the key as a string manually `oo['some_key']`
+- Use a key you know and type it after a dot manually `oo.some_key`
+- Notice that you can only access keys via the `.` if they have a name like a
   legal JavaScript variable (basically it can't have spaces, you'd have to
   use the string way)
 
 ```js
-let oo = {foo: 42, bar: 83, 'key w/ spaces': true}
+let oo = { foo: 42, bar: 83, 'key w/ spaces': true };
 console.log(oo['foo']);
 console.log(oo['bar']);
 console.log(oo['key w/ spaces']);
@@ -214,17 +222,17 @@ Use a for-in loop to iterate over all of the keys and access their value
 through brackets:
 
 ```js
-let oo = {foo: 42, bar: 83, baz: 79}
+let oo = { foo: 42, bar: 83, baz: 79 };
 for (let key in oo) {
-  let value = oo[key]
-  console.log('key:', key, 'value:', value)
+  let value = oo[key];
+  console.log('key:', key, 'value:', value);
 }
 ```
 
-* Use functions attached to access keys, values, or entries
-  * `Object.keys(oo)` returns an array of all keys
-  * `Object.values(oo)` returns an array of all values
-  * `Object.entries(oo)` returns an array of arrays containing `[key, value]` together
+- Use functions attached to access keys, values, or entries
+  - `Object.keys(oo)` returns an array of all keys
+  - `Object.values(oo)` returns an array of all values
+  - `Object.entries(oo)` returns an array of arrays containing `[key, value]` together
 
 ```js
 let oo = {foo: 42, bar: 83, baz: 79}
@@ -240,6 +248,7 @@ Object.entries(oo) => [ [ 'foo', 42 ], [ 'bar', 83 ], [ 'baz', 79 ] ]
 ```
 
 ### Iterating Through Deeply Nested Objects
+
 Go to the `index.html` file and uncomment the third `<script>` element
 `02-advanced-debug.js`. Do this after you've built your `gameObject` function
 that returns an object with all the properties described in the beginning of
@@ -254,24 +263,25 @@ time so you can step through your program bit by bit without adding
 `debugger` keywords everywhere.
 
 **02-advanced-debug.js**
+
 ```js
 function goodPractices() {
   let game = gameObject();
   for (let gameKey in game) {
     // are you ABSOLUTELY SURE what 'gameKey' is?
     // use the debugger to find out!
-    debugger
-    let teamObj = game[gameKey]
+    debugger;
+    let teamObj = game[gameKey];
     for (let teamKey in teamObj) {
       // are you ABSOLUTELY SURE what 'teamKey' is?
       // use debugger to find out!
-      debugger
+      debugger;
 
       // what is 'data' at each loop through out this block?
       // when will the following line of code work and when will it break?
-      let data = teamObj.player
+      let data = teamObj.player;
       for (let key in data) {
-        debugger
+        debugger;
       }
     }
   }
@@ -285,27 +295,28 @@ level. **Use this strategy of placing LOTS of `debugger` keywords when you
 iterate over things in order to investigate your program and solve this
 lab.**
 
-Okay, *now* we're ready to build out functions:
+Okay, _now_ we're ready to build out functions:
 
 ### Function Building
 
-* Build a function, `numPointsScored` that takes in an argument of a player's name and returns the number of points scored for that player.
-  * Think about where in the object you will find a player's `points`. How can
+- Build a function, `numPointsScored` that takes in an argument of a player's name and returns the number of points scored for that player.
+  - Think about where in the object you will find a player's `points`. How can
     you iterate down into that level? Think about the return value of your
     function.
-* Build a function, `shoeSize`, that takes in an argument of a player's name and returns the shoe size for that player.
-  * Think about how you will find the shoe size of the correct player. How can
+- Build a function, `shoeSize`, that takes in an argument of a player's name and returns the shoe size for that player.
+  - Think about how you will find the shoe size of the correct player. How can
     you check and see if a player's name matches the name that has been passed
     into the function as an argument?
-* Build a function, `teamColors`, that takes in an argument of the team name
+- Build a function, `teamColors`, that takes in an argument of the team name
   and returns an array of that teams colors.
-* Build a function, `teamNames`, that operates on the game object to return an
+- Build a function, `teamNames`, that operates on the game object to return an
   array of the team names.
-* Build a function, `playerNumbers`, that takes in an argument of a team name
+- Build a function, `playerNumbers`, that takes in an argument of a team name
   and returns an array of the jersey number's for that team.
-* Build a function, `playerStats`, that takes in an argument of a player's name
+- Build a function, `playerStats`, that takes in an argument of a player's name
   and returns a object of that player's stats.
-  * Check out the following example of the expected return value of the `playerStats` function:
+
+  - Check out the following example of the expected return value of the `playerStats` function:
 
     ```js
     playerStats("Alan Anderson")
@@ -321,14 +332,13 @@ Okay, *now* we're ready to build out functions:
     }
     ```
 
-* Build a function, `bigShoeRebounds`, that will return the number of rebounds
+- Build a function, `bigShoeRebounds`, that will return the number of rebounds
   associated with the player that has the largest shoe size. Break this one
   down into steps:
-  * First, find the player with the largest shoe size
-  * Then, return that player's number of rebounds
-  * Remember to think about return values here. Use `debugger` to drop into
+  - First, find the player with the largest shoe size
+  - Then, return that player's number of rebounds
+  - Remember to think about return values here. Use `debugger` to drop into
     your function and understand what it is returning and why.
-
 
 **Bonus Questions:**
 
